@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+############################
+# OS X
+############################
+
+>>>>>>> b302dd91ebb1d43e0d1dbb3a20fac1ddb77b0e04
 .DS_Store
 .AppleDouble
 .LSOverride
@@ -93,6 +100,41 @@ results
 node_modules
 .node_history
 
+<<<<<<< HEAD
 .env
 build
 dist
+=======
+############################
+# Package managers
+############################
+
+.yarn/*
+!.yarn/cache
+!.yarn/unplugged
+!.yarn/patches
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+yarn-error.log
+
+############################
+# Tests
+############################
+
+coverage
+
+############################
+# Strapi
+############################
+
+.env
+license.txt
+exports
+.strapi
+dist
+build
+.strapi-updater.json
+.strapi-cloud.json
+>>>>>>> b302dd91ebb1d43e0d1dbb3a20fac1ddb77b0e04
