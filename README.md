@@ -1,89 +1,35 @@
-# Glamour-API
+# API
 
-API para e-commerce simples. Desenvolvida em Node.JS
+## Structure
 
-## Estrutura de Pastas e Arquivos
-
-```bash
-
-ecommerce-api/
+``` pipline
+glamour-api/
 ├── src/
-│   ├── app.js
-│   ├── server.js
-│   ├── config/
-│   │   ├── db.config.js
-│   │   └── env.config.js
-│   ├── controllers/
-│   │   ├── auth.controller.js
-│   │   ├── product.controller.js
-│   │   ├── user.controller.js
-│   │   └── order.controller.js
-│   ├── models/
-│   │   ├── product.model.js
-│   │   ├── user.model.js
-│   │   └── order.model.js
-│   ├── routes/
-│   │   ├── authRoutes.js
-│   │   ├── index.js
-│   │   ├── productRoutes.js
-│   │   ├── userRoutes.js
-│   │   └── orderRoutes.js
-│   ├── services/
-│   │   ├── product.service.js
-│   │   ├── auth.service.js
-│   │   ├── user.service.js
-│   │   └── order.service.js
-│   └── middleware/
-│       ├── error.middleware.js
-│       └── auth.middleware.js
-├── .env
-├── .gitignore
-├── .nvmrc
-├── Dockerfile
-├── package-lock.json
-├── package.json
-└── README.md
-
+│   ├── config/          # Variáveis de ambiente e conexão DB
+│   ├── controllers/     # Validação de entrada e resposta (HTTP)
+│   ├── middlewares/     # Erros, Auth, Logging
+│   ├── models/          # Schemas do Mongoose
+│   ├── routes/          # Definição das rotas
+│   ├── services/        # Regras de negócio
+│   └── server.ts        # Entry point
+├── .env                 # Credenciais do Atlas
+├── tsconfig.json        # Configuração do TS
+└── package.json
 ```
 
-## Estrutura das Rotas da API
+## Dependencies
 
-Home / Catálogo de Produtos:
-
-* GET /products – Listar produtos.
-
-* GET /products/:id – Detalhes do produto.
-
-* POST /products – Criar novo produto.
-
-* PUT /products/:id – Atualizar produto.
-
-* DELETE /products/:id – Excluir produto.
-
-Login / Registro:
-
-* POST /auth/login – Login.
-
-* POST /auth/register – Registro de usuário.
-
-* POST /auth/logout – Sair.
-
-Pedidos:
-
-* POST /orders – Fazer pedido
-
-* GET /orders – Listar pedidos.
-
-* DELETE /orders/:id – Excluir pedido.
-
-Admins:
-
-* GET /users – Listar administradores.
-
-* GET /users:id – Ver um administrador especifico.
-
-* PUT /users:id – Atualizar administrador
-
-* DELETE /users/:id – Deletar administrador
-
----
+``` pipline
+glamour-api/
+├── @koa/cors@5.0.0
+├── @types/koa-bodyparser@4.3.13
+├── @types/koa-router@7.4.9
+├── @types/koa@3.0.1
+├── dotenv@17.2.4
+├── koa-bodyparser@4.4.1
+├── koa-router@14.0.0
+├── koa@3.1.1
+├── mongoose@9.1.6
+├── ts-node-dev@2.0.0
+└── typescript@5.9.3
+```
